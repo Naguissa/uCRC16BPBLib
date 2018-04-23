@@ -13,8 +13,10 @@ Supports any microcontroller.
 This library is used with only static methods, you don't need to (and can't) initialize any class object.
 
 You have these methods:
- - *uCRC16Lib::calculate(char * data_to_be_encoded, uint16_t size);* : Returns CRC16 in a uint16_t
- - *uCRC16Lib::crc_ok* : uint16_t with CRC16 value of "T 0xD9 0xE4" (without spaces)
+ - *uCRC16BPBLibObject->reset()* : Resets internal state
+ - *uCRC16BPBLibObject->feedBit(bool)* : Feeds a bit
+ - *uCRC16BPBLibObject->feedByte(char)* : Feeds a byte
+ - *uCRC16BPBLibObject->getResult()* : Gets CRC16 in a uint16_t
 
 ## How do I get set up? ##
 
