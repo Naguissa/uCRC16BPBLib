@@ -4,7 +4,7 @@
  * @copyright Naguissa
  * @author Naguissa
  * @email naguissa@foroelectro.net
- * @version 1.0.0
+ * @version 2.0.0
  * @created 2018-04-21
  */
 #include "uCRC16BPBLib.h"
@@ -79,10 +79,10 @@ uint16_t uCRC16BPBLib::getResult() {
 	if (_first == true) {
 		return (~_crc);
 	}
-
 	_crc = ~_crc;
-	_data = _crc;
-	_crc = (_crc << 8) | (_data >> 8 & 0xFF);
+	// Byte swap only needed in certain cases (i.e.: line transmission), so don't perform it.
+	// _data = _crc;
+	// _crc = (_crc << 8) | (_data >> 8 & 0xFF);
 	return (_crc);
 }
 

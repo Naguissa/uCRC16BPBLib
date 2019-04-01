@@ -4,7 +4,7 @@
  * @copyright Naguissa
  * @author Naguissa
  * @email naguissa@foroelectro.net
- * @version 1.0.0
+ * @version 2.0.0
  * @created 2018-04-21
  */
 #ifndef _uCRC16BPBLib_
@@ -25,7 +25,7 @@
 
 			uint16_t getResult();
 
-			static const uint16_t crc_ok = 0x470F;
+			static const uint16_t crc_ok = 0x0F47;
 		private:
 			uint16_t _data;
 			uint16_t _crc;

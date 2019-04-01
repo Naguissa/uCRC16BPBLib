@@ -53,7 +53,7 @@ void setup() {
 	string[2] = (unsigned char)0xe4;
 	string[3] = NULL;
 
-	Serial.print("The crc of \"T\" is 0xD9E4. crc16 bytes returned ");
+	Serial.print("The crc of \"T\" is 0xE4D9. crc16 bytes returned ");
 	Serial.print(crcStringBytes(&string[0], 1), HEX);
 	Serial.print("; crc16 bits returned ");
 	Serial.println(crcStringBits(&string[0], 1), HEX);
@@ -70,7 +70,7 @@ void setup() {
 	strcpy(string, "THE,QUICK,BROWN,FOX,0123456789");
 	Serial.print("The crc of \"");
 	Serial.print(string);
-	Serial.print("\" is 0x6E20. crc16 returned... Bytes ");
+	Serial.print("\" is 0x206E. crc16 returned... Bytes ");
 	Serial.print(crcStringBytes(&string[0], strlen(string)), HEX);
 	Serial.print("; Bits: ");
 	Serial.println(crcStringBits(&string[0], strlen(string)), HEX);
@@ -80,11 +80,15 @@ void setup() {
 	string[1] = (unsigned char)0x3F;
 
 	Serial.print("CCITT Recommendation X.25 (1984) Appendix I example:");
-	Serial.print("\tThe crc of 0x03 0x3F is 0x5BEC. crc16 returned... Bytes: ");
+	Serial.print("\tThe crc of 0x03 0x3F is 0xEC5B. crc16 returned... Bytes: ");
 	Serial.print(crcStringBytes(&string[0], 2), HEX);
 	Serial.print("; Bits: ");
 	Serial.println(crcStringBits(&string[0], 2), HEX);
 	Serial.println();
+
+	Serial.println("* Note: All calculations are without byte-swapping now. For line transmission this is mandatory, but not needed for general use.");
+	Serial.println();
+
 
 	Serial.println(" - END -");
 	Serial.println();
