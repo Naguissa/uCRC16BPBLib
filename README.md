@@ -1,5 +1,7 @@
 # Tiny and cross-device compatible CCITT CRC16 Bit Per Bit or Byte Per Byte calculator library - uCRC16BPBLib #
 
+Master status:   [![Build Status](https://travis-ci.org/Naguissa/uCRC16BPBLib.svg?branch=master)](https://travis-ci.org/Naguissa/uCRC16BPBLib)
+
 ## What is this repository for? ##
 
 Tiny and cross-device compatible CCITT CRC16 Bit Per Bit or Byte Per Byte calculation.
